@@ -10,7 +10,7 @@ function view (state, emit) {
   return html`
     <body class="sans-serif">
       <h1 class="f-headline pa3 pa4-ns">
-        Let's flag!
+      🎌 Let's flag! 🎌
       </h1>
 
       <div class="ph3 ph4-ns">
