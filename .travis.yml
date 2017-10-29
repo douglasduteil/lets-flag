@@ -1,0 +1,30 @@
+---
+dist: trusty
+language: node_js
+sudo: false
+git:
+  depth: 5
+
+node_js: stable
+
+cache:
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - source ~/.bashrc
+
+stages:
+  - name: Deploy
+    if: branch = master
+
+jobs:
+  include:
+    - stage: Deploy
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        local_dir: $TRAVIS_BUILD_DIR/dist
+        github-token: $GITHUB_TOKEN 
+        on:
+          branch: master
