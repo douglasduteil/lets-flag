@@ -21,10 +21,13 @@ stages:
 jobs:
   include:
     - stage: Deploy
+      script:
+        - yarn test
+        - yarn run build
       deploy:
         provider: pages
         skip_cleanup: true
         local_dir: $TRAVIS_BUILD_DIR/dist
-        github-token: $GITHUB_TOKEN 
+        github-token: $GITHUB_TOKEN
         on:
           branch: master
