@@ -1,0 +1,14 @@
+{
+  "name": "lets-flag",
+  "short_name": "lets-flag",
+  "description": "Let's flag !",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffc0cb",
+  "theme_color": "#ffc0cb",
+  "icons": [{
+    "src": "/assets/icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}
