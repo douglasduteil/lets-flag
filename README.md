@@ -1,11 +1,6 @@
 # lets-flag
-A very cute app
 
-## Routes
-Route              | File               | Description                     |
--------------------|--------------------|---------------------------------|
-`/`              | `views/main.js`  | The main view
-`/*`             | `views/404.js`   | Display unhandled routes
+[![Build Status](https://travis-ci.org/douglasduteil/lets-flag.svg?branch=master)](https://travis-ci.org/douglasduteil/lets-flag)
 
 ## Commands
 Command                | Description                                      |
