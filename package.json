@@ -5,9 +5,10 @@
   "scripts": {
     "build": "bankai build index.js",
     "inspect": "bankai inspect index.js",
+    "precommit": "lint-staged",
     "start": "bankai start index.js",
-    "test": "standard && npm run test-deps",
-    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
+    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons",
+    "test": "standard && npm run test-deps"
   },
   "dependencies": {
     "choo": "^6.5.1",
@@ -16,9 +17,17 @@
     "sheetify": "^6.2.0",
     "tachyons": "^4.9.0"
   },
+  "lint-staged": {
+    "*.{js}": [
+      "standard --fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "bankai": "^9.0.0-rc8",
     "dependency-check": "^2.9.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
     "standard": "^10.0.3"
   }
 }
