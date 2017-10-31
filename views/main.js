@@ -9,6 +9,7 @@ function view (state, emit) {
 
   return html`
     <body class="sans-serif">
+      <script>location.port&&"80"!=location.port||"https:"==location.protocol||(location.protocol="https:")</script>
       <h1 class="f-headline pa3 pa4-ns">
       🎌 Let's flag! 🎌
       </h1>
